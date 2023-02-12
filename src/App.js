@@ -1,30 +1,63 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
+import {BrowserRouter,Routes, Route} from "react-router-dom";
 import {Canvas} from '@react-three/fiber';
-import Flower from './components/Flower';
-import Nav from './components/Nav';
-import Lights from './components/Lights';
+import {Flower, PageNotFound, Lights, About, Nav} from './components';
+import { Dna } from  'react-loader-spinner'
 import './App.css';
 
 
-const Content = () =>{
-  return(
-    //<mesh position={[0, -0.50, 0]}>
-    <>
-    <Flower />
-    </>
-    )
-}
+// const Content = () =>{
+//   return(
+//     //<mesh position={[0, -0.50, 0]}>
+//     <>
+//     <Flower />
+//     </>
+//     )
+// }
 function App(){
+  const [preLoad, setPreLoader] = useState( false);
+
+  useEffect(() =>{
+    setPreLoader(true)
+    setTimeout(() => {
+      setPreLoader(false)
+    }
+    ,3500)
+  },[]);
+
   return(
-    <>
-    <Nav />
+    <div className='App'>
+    {
+      preLoad ? (
+      <Dna
+        visible={true}
+        height="80"
+        width="80"
+        color="black"
+        ariaLabel="dna-loading"
+        wrapperStyle={{}}
+        wrapperClass="dna-wrapper"
+      />)
+    :(
+      <>
+      <Nav />
+    <BrowserRouter>
+    <Routes>
+    <Route path="*" element={<PageNotFound />} />
+    <Route path="/about" element={<About />} />
+    </Routes>
+    </BrowserRouter>
+     
     <Suspense fallback={null}>
       <Canvas>
         <Lights />
-        <Content />
+        <Flower />
       </Canvas>
     </Suspense>
-    </>
+     </>
+    
+  )}
+    </div>
     )
 }
 

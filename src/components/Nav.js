@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { AiFillGithub } from 'react-icons/ai';
 
 const Nav = () =>{
@@ -10,8 +11,8 @@ const Nav = () =>{
 			</div>
 			<div className='navs'>
 				<ul>
-					<li><a href=''>About</a></li>
-					<li><a href=''> Projects</a></li>
+					<li>
+					<NavLink to='/about'>About</NavLink></li>
 				</ul>
 			</div>
 		</div>

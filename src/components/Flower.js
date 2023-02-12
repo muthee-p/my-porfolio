@@ -21,7 +21,7 @@ const Flower = () => {
 	},[gltf]);
 
   const ref = useRef();
-  useFrame(() => gltf.scene.rotation.y += 0.01);
+  useFrame(() => gltf.scene.rotation.y += 0.002);
 
   return (
   	<>

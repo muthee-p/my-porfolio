@@ -1,8 +1,4 @@
-import React, { useEffect } from 'react';
-import {useLoader } from '@react-three/fiber';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import {Mesh } from 'three';
-
+import React from 'react';
 
 const Lights =() =>{
   return(
