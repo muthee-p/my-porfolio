@@ -1,8 +1,33 @@
 .App {
   text-align: center;
-  background-color: black;
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   width:100%;
   height: 100vh;
+
+}
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.card {
+    height: 50vh;
+    border-radius: 13px;
+    box-shadow: 20px 40px 33px rgba(0,0,0,0.3);
+    padding: 2rem;
+    width: 35vw;
+    background-color:  #4d303a;
+    color: white;
+    z-index: 100;
+
 }

@@ -7,13 +7,11 @@ const Nav = () =>{
 
 		<div className='Nav'>
 			<div>
-				<AiFillGithub />
+				<a href='https://github.com/muthee-p'><AiFillGithub /></a>
 			</div>
 			<div className='navs'>
-				<ul>
-					<li>
-					<NavLink to='/about'>About</NavLink></li>
-				</ul>
+					<NavLink to='/about'>About</NavLink>
+				
 			</div>
 		</div>
 		);
