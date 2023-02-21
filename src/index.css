@@ -5,14 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #4d303a;
+  background: black;
 /*    background-image: linear-gradient(to bottom right, #4d303a, #3d4356);*/
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 html, body, #root, canvas {
   width: 100%;
   height: 100%;
