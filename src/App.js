@@ -1,7 +1,7 @@
 import React, {Suspense, useEffect, useState} from 'react';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 import {Canvas} from '@react-three/fiber';
-import {Flower, PageNotFound, Lights, About, Nav, Details, Contact} from './components';
+import {Flower, PageNotFound, Lights, About, Home, Details, Contact} from './components';
 import { Dna } from  'react-loader-spinner'
 import './App.css';
 
@@ -44,7 +44,7 @@ function App(){
     <BrowserRouter>
     <Routes>
     <Route path="*" element={<PageNotFound />} />
-    <Route path='/' element ={<Nav />}/>
+    <Route path='/' element ={<Home />}/>
     <Route path="/about" element={<About />} />
     <Route path="/details" element={<Details />} />
     <Route path="/contact" element={<Contact />} />

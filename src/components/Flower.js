@@ -6,11 +6,11 @@ import {Mesh } from 'three';
 
 
 const Flower = () => {
-  const gltf = useLoader(GLTFLoader, "/deer/scene.gltf");
+  const gltf = useLoader(GLTFLoader, "/fire_in_the_sky/scene.gltf");
 
   useEffect(() =>{
-		gltf.scene.scale.set(2.08, 2.08, 2.08);
-		gltf.scene.position.set(0,-3.59, 0);
+		gltf.scene.scale.set(1.8, 1.8, 1.8);
+		gltf.scene.position.set(0,-0.59, 0);
 		gltf.scene.traverse((object) =>{
 			if(object instanceof Mesh){
 				object.castShadow = true;

@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: black;
+/*  background-image: url("sky.jpg");*/
+  background: deepskyblue;
 /*    background-image: linear-gradient(to bottom right, #4d303a, #3d4356);*/
 }
 
