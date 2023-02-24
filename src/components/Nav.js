@@ -3,19 +3,22 @@ import { Link } from 'react-router-dom';
 import '../Styles/Nav.css';
 
 const Nav = () =>{
+	
 	return(
 		<div className='Nav'>
 			<div className="nav-container">
-				<div className="logo">
-					<h4><Link to='/'>muthee-p</Link></h4>
-				</div>
-			
+				
+					<h4 className="logo"><Link to='/'>muthee p</Link></h4>
+				
 				<div className='navs'>
-					
-					<Link to='/contact'>Contact</Link>
-					<Link to='/about'>About</Link>
+				<ul className='inner-nav'>
+					<li><Link to='/details'>Site Details</Link></li>
+					<li><Link to='/contact'>Contact</Link></li>
+					<li><Link to='/projects'>Projects</Link></li>
+					<li><Link to='/about'>About</Link></li>
+
+			</ul>
 			</div>
-			
 			</div>
 		</div>
 		);

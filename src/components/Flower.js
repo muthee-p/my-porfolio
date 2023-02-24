@@ -22,7 +22,7 @@ const Flower = () => {
 
   
   useFrame((state, delta) => {
-  const speed = 0.2; // adjust the speed of the rotation
+  const speed = 0.05; // adjust the speed of the rotation
   const amplitude = Math.PI / 1; //  turn angle
   const t = state.clock.elapsedTime * speed;
   gltf.scene.rotation.y = Math.sin(t) * amplitude;
@@ -35,7 +35,7 @@ const Flower = () => {
   	<OrbitControls target={[0, 0, 0]} maxPolarAngle={1.45} />
 	<PerspectiveCamera makeDefault fov={50} position={[3,2,5]} />
 
-     <color args={[0, 0, 0]} attach='gltf' />
+     {/*<color args={[0, 0, 0]} attach='background' />*/}
 	
   	</>
   	);

@@ -1,7 +1,7 @@
 import React, {Suspense, useEffect, useState} from 'react';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 import {Canvas} from '@react-three/fiber';
-import {Flower, PageNotFound, Lights, About, Home, Details, Contact} from './components';
+import {Flower, PageNotFound, Lights, About, Home, Details, Contact, Projects} from './components';
 import { Dna } from  'react-loader-spinner'
 import './App.css';
 
@@ -22,7 +22,7 @@ function App(){
     setTimeout(() => {
       setPreLoader(false)
     }
-    ,3500)
+    ,7000)
   },[]);
 
   return(
@@ -48,11 +48,12 @@ function App(){
     <Route path="/about" element={<About />} />
     <Route path="/details" element={<Details />} />
     <Route path="/contact" element={<Contact />} />
+    <Route path="/projects" element={<Projects />} />
     </Routes>
     </BrowserRouter>
      
     <Suspense fallback={null}>
-      <Canvas>
+      <Canvas className="canvas">
         <Lights />
         <Flower />
       </Canvas>

@@ -1,3 +1,9 @@
+.canvas{
+   background-image: url("background.png");
+  background-repeat:no-repeat ;
+  background-size: cover;
+ 
+}
 .App {
   text-align: center;
   display: flex;
@@ -26,12 +32,62 @@ a:hover{
   position: absolute;
 }
 .card {
-    height: 50vh;
-    border-radius: 13px;
+    height: 70vh;
+    
     box-shadow: 20px 40px 33px rgba(0,0,0,0.3);
     padding: 2rem;
-    width: 35vw;
-    background-color:  #4d303a;
+    width: 25vw;
+    background-color:  #F2F8FC;
     z-index: 100;
+    color: #2C3A4F;
+    
+}
+.card2 p{
+    text-align: left;
+}
+.card2{
+  margin-right: 20px;
+}
+.card2 a, .card3 a{
+  color: #2C3A4F;
+}
+.card3{
+  margin-left: 20px;
+}
+@media  screen and (max-width: 1024px) {
+  .canvas{
+   width: ;
+  
+}
+.App {
+  
+  width:100%;
+  height: 100%;
+ 
+
+}
+}
+@media  screen and (max-width: 992px) {
+  
+  
+}
+@media  screen and (max-width: 768px) {
+.card {
+    width: 32vw; 
+}
+
+}
+@media  screen and (max-width: 576px) {
+  .card {
+    width: 53vw;
+    
+}
+  
+}
+@media  screen and (max-width: 350px) {
+  
+    .card {
+    width: 70vw; 
+}
 
 }
